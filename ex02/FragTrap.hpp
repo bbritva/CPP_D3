@@ -2,29 +2,28 @@
 // Created by Gregorio Velva on 8/29/21.
 //
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
 #include <string>
 #include <iostream>
 #include "ClapTrap.hpp"
 
-#define ST_CONS_MSG "ST " CONS_MSG
-#define ST_COPY_MSG "ST " COPY_MSG
-#define ST_ASSIGN_MSG "ST " ASSIGN_MSG
-#define ST_DES_MSG "ST " DES_MSG
-#define GATE_KEEPER_MSG "ScavTrap have enterred in Gate keeper mode\n"
+#define FT_CONS_MSG "FT " CONS_MSG
+#define FT_COPY_MSG "FT " COPY_MSG
+#define FT_ASSIGN_MSG "FT " ASSIGN_MSG
+#define FT_DES_MSG "FT " DES_MSG
+#define HIGH_FIVE_MSG "FragTrap high five!\n"
 
-class ScavTrap: public ClapTrap
+class FragTrap: public ClapTrap
 {
 
 public:
-	ScavTrap(std::string name);
-	ScavTrap(ScavTrap &other);
-	ScavTrap & operator=(ScavTrap const &num);
-	~ScavTrap();
-	void attack(std::string const &target);
-	void guardGate();
+	FragTrap(std::string name);
+	FragTrap(FragTrap &other);
+	FragTrap & operator=(FragTrap const &num);
+	~FragTrap();
+	void highFivesGuys();
 	};
 
-#endif //SCAVTRAP_HPP
+#endif //FRAGTRAP_HPP

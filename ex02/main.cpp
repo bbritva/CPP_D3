@@ -4,11 +4,13 @@
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
 	ClapTrap ct("Garlic pie");
 	ScavTrap st("Peanut butter");
+	FragTrap ft("Dirty panties");
 
 
 	ct.attack("vampire");
@@ -17,6 +19,9 @@ int main()
 	st.attack("allergic neighbor");
 	st.takeDamage(40);
 	st.beRepaired(40);
-	st.guardGate();
+	ft.attack("allergic neighbor");
+	ft.takeDamage(40);
+	ft.beRepaired(40);
+	ft.highFivesGuys();
 	return 0;
 }

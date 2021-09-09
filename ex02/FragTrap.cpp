@@ -1,38 +1,32 @@
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-ScavTrap::ScavTrap(std::string name)
+FragTrap::FragTrap(std::string name)
 {
 	this->_name = name;
-	this->setParameters(100, 50, 20);
-	std::cout << ST_CONS_MSG;
+	this->setParameters(100, 100, 30);
+	std::cout << FT_CONS_MSG;
 }
 
-ScavTrap::ScavTrap(ScavTrap &other)
+FragTrap::FragTrap(FragTrap &other)
 {
-	std::cout << ST_COPY_MSG;
+	std::cout << FT_COPY_MSG;
 	*this = other;
 }
 
-ScavTrap& ScavTrap::operator=(ScavTrap const& other)
+FragTrap& FragTrap::operator=(FragTrap const& other)
 {
-	std::cout << ST_ASSIGN_MSG;
+	std::cout << FT_ASSIGN_MSG;
 	this->_name = other._name;
 	(*this).setParameters(other._hitPoints, other._energyPoints, other._attackDamage);
 	return (*this);
 }
 
-ScavTrap::~ScavTrap()
+FragTrap::~FragTrap()
 {
-	std::cout << ST_DES_MSG;
+	std::cout << FT_DES_MSG;
 }
 
-void ScavTrap::attack(std::string const &target)
+void FragTrap::highFivesGuys()
 {
-	std::cout << "ScavTrap " << this->_name << " attacked " << target << ", causing " << this->_attackDamage
-	<< " points of damage!\n";
-}
-
-void ScavTrap::guardGate()
-{
-	std::cout << GATE_KEEPER_MSG;
+	std::cout << HIGH_FIVE_MSG;
 }
