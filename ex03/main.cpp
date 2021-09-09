@@ -5,12 +5,14 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main()
 {
 	ClapTrap ct("Garlic pie");
 	ScavTrap st("Peanut butter");
 	FragTrap ft("Dirty panties");
+	DiamondTrap dt("Nettle bush");
 
 
 	ct.attack("vampire");
@@ -19,9 +21,15 @@ int main()
 	st.attack("allergic neighbor");
 	st.takeDamage(40);
 	st.beRepaired(40);
-	ft.attack("allergic neighbor");
+	st.guardGate();
+	ft.attack("priest");
 	ft.takeDamage(40);
 	ft.beRepaired(40);
 	ft.highFivesGuys();
+	dt.attack("naked people");
+	dt.takeDamage(60);
+	dt.beRepaired(60);
+	dt.highFivesGuys();
+	dt.guardGate();
 	return 0;
 }

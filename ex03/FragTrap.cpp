@@ -4,19 +4,19 @@ FragTrap::FragTrap()
 {
 	this->_name = "FragTrap";
 	this->setParameters(100, 100, 30);
-	std::cout << FT_CONS_MSG;
+	std::cout << "frag: " FT_CONS_MSG;
 }
 
 FragTrap::FragTrap(std::string name)
 {
 	this->_name = name;
 	this->setParameters(100, 100, 30);
-	std::cout << FT_CONS_MSG;
+	std::cout << "frag: " FT_CONS_MSG;
 }
 
 FragTrap::FragTrap(FragTrap &other)
 {
-	std::cout << FT_COPY_MSG;
+	std::cout << "frag: " FT_COPY_MSG;
 	*this = other;
 }
 
@@ -30,7 +30,7 @@ FragTrap& FragTrap::operator=(FragTrap const& other)
 
 FragTrap::~FragTrap()
 {
-	std::cout << FT_DES_MSG;
+	std::cout << "frag: " FT_DES_MSG;
 }
 
 void FragTrap::highFivesGuys()

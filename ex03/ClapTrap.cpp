@@ -4,24 +4,24 @@
 ClapTrap::ClapTrap()
 {
 	this->setParameters(10, 10, 0);
-	std::cout << CONS_MSG;
+	std::cout << "clap: " CONS_MSG;
 }
 
 ClapTrap::ClapTrap(std::string name):_name(name)
 {
 	this->setParameters(10, 10, 0);
-	std::cout << CONS_MSG;
+	std::cout << "clap: " CONS_MSG;
 }
 
 ClapTrap::ClapTrap(ClapTrap &other)
 {
-	std::cout << COPY_MSG;
+	std::cout << "clap: " COPY_MSG;
 	*this = other;
 }
 
 ClapTrap& ClapTrap::operator=(ClapTrap const& other)
 {
-	std::cout << ASSIGN_MSG;
+	std::cout << "clap: " ASSIGN_MSG;
 	this->_name = other._name;
 	(*this).setParameters(other._hitPoints, other._energyPoints, other._attackDamage);
 	return (*this);
@@ -29,7 +29,7 @@ ClapTrap& ClapTrap::operator=(ClapTrap const& other)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << DES_MSG;
+	std::cout << "clap: " DES_MSG;
 }
 
 void ClapTrap::setParameters(unsigned int hp, unsigned int ep, unsigned int ad)
