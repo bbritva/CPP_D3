@@ -3,14 +3,20 @@
 //
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main()
 {
-	ClapTrap cp("Garlic pie");
+	ClapTrap ct("Garlic pie");
+	ScavTrap st("Peanut butter");
 
 
-	cp.attack("vampire");
-	cp.takeDamage(20);
-	cp.beRepaired(20);
+	ct.attack("vampire");
+	ct.takeDamage(20);
+	ct.beRepaired(20);
+	st.attack("allergic neighbor");
+	st.takeDamage(40);
+	st.beRepaired(40);
+	st.guardGate();
 	return 0;
 }

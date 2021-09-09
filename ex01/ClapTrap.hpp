@@ -11,7 +11,6 @@
 #define CONS_MSG "Default constructor called\n"
 #define COPY_MSG "Copy constructor called\n"
 #define ASSIGN_MSG "Assignation operator called\n"
-#define GRB_MSG "getRawBits member function called\n"
 #define DES_MSG "Destructor called\n"
 
 class ClapTrap

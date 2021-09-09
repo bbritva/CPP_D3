@@ -3,19 +3,19 @@
 ScavTrap::ScavTrap(std::string name)
 {
 	this->_name = name;
-	this->setParameters(10, 10, 0);
-	std::cout << CONS_MSG;
+	this->setParameters(100, 50, 20);
+	std::cout << ST_CONS_MSG;
 }
 
 ScavTrap::ScavTrap(ScavTrap &other)
 {
-	std::cout << COPY_MSG;
+	std::cout << ST_COPY_MSG;
 	*this = other;
 }
 
 ScavTrap& ScavTrap::operator=(ScavTrap const& other)
 {
-	std::cout << ASSIGN_MSG;
+	std::cout << ST_ASSIGN_MSG;
 	this->_name = other._name;
 	(*this).setParameters(other._hitPoints, other._energyPoints, other._attackDamage);
 	return (*this);
@@ -23,16 +23,8 @@ ScavTrap& ScavTrap::operator=(ScavTrap const& other)
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << DES_MSG;
+	std::cout << ST_DES_MSG;
 }
-
-void ScavTrap::setParameters(unsigned int hp, unsigned int ep, unsigned int ad)
-{
-	this->_attackDamage = ad;
-	this->_energyPoints = ep;
-	this->_hitPoints = hp;
-}
-
 
 void ScavTrap::attack(std::string const &target)
 {
@@ -40,12 +32,7 @@ void ScavTrap::attack(std::string const &target)
 	<< " points of damage!\n";
 }
 
-void ScavTrap::takeDamage(unsigned int amount)
+void ScavTrap::guardGate()
 {
-	std::cout << "ScavTrap " << this->_name << " took " << amount << " points of damage!\n";
-}
-
-void ScavTrap::beRepaired(unsigned int amount)
-{
-	std::cout << "ScavTrap " << this->_name << " was repaired for " << amount << " points!\n";
+	std::cout << GATE_KEEPER_MSG;
 }
