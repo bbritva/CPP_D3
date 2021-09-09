@@ -34,3 +34,7 @@
 
 # IDE files
 *vscode*
+*.o
+*/*.o
+*.idea*
+*/*.idea*
